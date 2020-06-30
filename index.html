@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MFEE07_王昭鈞_質數＿月曆篇</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <style>
+        @keyframes changeFlip {
+            from {
+
+                transform: translateZ(500px);
+                transform: rotateX(180deg);
+
+            }
+
+            to {
+
+                transform: translateZ(0);
+                transform: rotateX(0);
+
+            }
+
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+    
+
+        /* 模組化開始 */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .d-flex-c {
+            display: flex;
+            flex-flow: column;
+        }
+
+        /* 模組化結束 */
+        .top{
+            width: 540px;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+        .twoballs{
+            width: 20px;
+            height: 10px;
+            border: 3px solid black;
+            border-bottom: none;
+            border-radius: 50% 50% 0 0 ;
+            background-color: rgb(161, 161, 161);
+        }
+        header {
+            
+            height: auto;
+            border: 22px double black;
+            background-color: #ccc;
+            border-radius: 20px;
+            align-items: center;
+        }
+        .outline{
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            background-color: rgb(255, 255, 0);
+        }
+        .dashed{
+            
+            border-radius: 5px;
+            border: 3px dashed black; 
+            margin: 5px;
+
+        }
+        
+
+        header p {
+            color: rgb(255, 255, 255);
+            font-size: 110px;
+            letter-spacing: -5px;
+            -webkit-text-stroke: 4px black;            
+            font-family: 'Rubik Mono One', sans-serif;
+            text-align: center;
+            text-shadow:8px 8px rgb(161, 161, 161);
+        }
+        .box{
+            height: 50px;
+            background-color: #ccc;
+            border-bottom: 3px solid black;
+        }
+        .lrline{
+            width: 70%;
+            height: 100%;
+            margin: 0 auto;
+            border-left: 3px solid black;
+            border-right: 3px solid black;
+        }
+        main {
+            align-items: center;
+        }
+        main p{
+            width: 100%;
+            color: black;
+            font-size: 28px;
+            font-family: 'Rubik Mono One', sans-serif;
+            text-align: center;            
+        }
+        
+        .numberarea {
+            width: 100%;
+            margin: 0px auto;
+            flex-wrap: wrap;
+            background-color:#ccc;
+            perspective: 800px;
+            perspective-origin: center;
+            border-top: 3px dashed rgb(161, 161, 161);
+        }
+        
+
+        .calendar {
+            background-color: #fff;
+            color: rgb(255, 255, 0);
+            -webkit-text-stroke: 2px black;
+            margin: 10px ;
+            width: calc(20% - 20px);
+            height: 100px;
+            border: 2px solid black;
+            letter-spacing: -5px;
+            border-radius: 10px;
+            font-size: 45px;
+            line-height: 100px;
+            font-family: 'Rubik Mono One', sans-serif;
+            text-align: center;
+            box-shadow:8px 8px rgb(161, 161, 161);
+            animation: changeFlip 1s;
+            
+        }
+
+
+        aside {
+            border-top: 3px solid black;
+            
+        }
+
+        .pbox {
+            width: 100%;
+            margin: 0 auto;
+            color: black;
+            font-size: 20px;
+            font-family: Arial;
+            text-align: center;
+            line-height: 50px;
+            
+
+        }
+        button {
+            width: 75px;
+            height: 20px;
+            border: none;
+            border: 2px solid black;
+            background-color: rgb(255, 255, 0);
+            margin: 0 auto;
+        }
+        .bottom_box{
+            height: 50px;
+            background-color: #ccc;
+            border-top: 3px solid black;
+        }
+        .btwoballs{
+            width: 20px;
+            height: 10px;
+            border: 3px solid black;
+            border-top: none;
+            border-radius:  0 0 50% 50%;
+            background-color: rgb(161, 161, 161);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top d-flex">
+        <div class="twoballs"></div>
+        <div class="twoballs"></div>
+    </div>
+    <header class="container d-flex-c">
+        <div class="outline">
+            <div class="dashed">
+                <p>PRIME</p>
+            </div>
+        </div>
+    </header>
+    <div class="box container">
+        <div class="lrline"></div>
+        
+    </div>
+    <main class="container d-flex-c">
+        <p> From one to one-hundred</p>
+        <div class="numberarea d-flex">
+            
+            <!-- <div class="numbercard">
+                23
+            </div> -->
+
+        </div>
+    </main>
+    <div class="box container">
+        <div class="lrline"></div>
+        
+    </div>
+    <aside class="container d-flex-c">
+        <div class="pbox">
+            click here----->
+            <button onclick="showNum()">START</button>
+            <----click here
+        </div>
+    </aside>
+    <div class="bottom_box container">
+        <div class="lrline"></div>        
+    </div>
+    <header class="container d-flex-c">
+        <div class="outline">
+            <div class="dashed">
+                <p>DONED</p>
+            </div>
+        </div>
+    </header>
+    <div class="top d-flex">
+        <div class="btwoballs"></div>
+        <div class="btwoballs"></div>
+    </div>
+    
+    
+    <script>
+
+
+        let flag = false;
+        let arr = [];
+        for (let num = 2; num <= 100; num++) {
+            for (let i = 2; i < num; i++) {
+                if (num % i == 0) flag = true;
+            }
+            if (flag == false) {
+                arr.push(num);
+            } else { flag = false; }
+        };
+        // console.log(arr);
+
+
+
+        function showNum() {
+            for (let x = 0; x < arr.length; x++) {
+                setTimeout(function () {
+                    var myNum = document.getElementsByClassName("numberarea")[0];
+                    var newDiv = document.createElement('div');
+                    newDiv.setAttribute("class", "calendar");
+                    var textNode = document.createTextNode(arr[x]);
+                    newDiv.appendChild(textNode);
+                    myNum.appendChild(newDiv);
+                }, (x + 1) * 500);
+
+            };
+        };
+
+        // showNum();
+
+    </script>
+</body>
+
+</html>
