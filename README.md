@@ -1,2 +1,2 @@
-# PrimeNumberCard.github.io
+# PrimeNumberCard
  
